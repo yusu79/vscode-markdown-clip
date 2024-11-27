@@ -1,11 +1,11 @@
 # Markdown Clip
-![GitHub License](https://img.shields.io/github/license/vscode-markdown-clip/yusu79/)
+![GitHub License](https://img.shields.io/github/license/yusu79/vscode-markdown-clip)
 ![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/yusu79.vscode-markdown-clip)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
 
 MarkdownをHTMLに変換し、クリップボードにコピーする機能を提供するVSCode拡張機能です。
 
-[English version of README is available here.]((https://github.com/yusu79/vscode-markdown-clip/blob/main/README_en.md))
+[English version of README is available here.](https://github.com/yusu79/vscode-markdown-clip/blob/main/README_en.md)
 
 
 - [インストール](#インストール)
@@ -22,7 +22,9 @@ MarkdownをHTMLに変換し、クリップボードにコピーする機能を�
 ## インストール
 VScodeのマーケットプレイスで「Markdown Clip」と入力してください｡
 
-<div style="text-align: center;"><img src="icons/setup.png" width="70%"/></div>
+<p align="center">
+<img src="icons/setup.png" width="70%"/>
+</p>
 
 ## 機能
 - 選択したMarkdownテキストをHTMLに変換

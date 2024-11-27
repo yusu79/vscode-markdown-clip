@@ -17,7 +17,10 @@ A VSCode extension that provides functionality to convert Markdown to HTML and c
 ## Setup
 Enter "Markdown Clip" in the VScode marketplace.
 
-<div style="text-align: center;"><img src="icons/setup.png" width="70%"/></div>
+<p align="center">
+<img src="icons/setup.png" width="70%"/>
+</p>
+
 
 ## Features
 - Convert selected Markdown text to HTML
