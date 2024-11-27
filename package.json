@@ -1,0 +1,117 @@
+{
+  "name": "vscode-markdown-clip",
+  "displayName": "vscode-markdown-clip",
+  "description": "%markdown-clip.copyAsHtml.description%",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "publisher": "yusu79",
+  "author": {
+    "name": "yusu79",
+    "email": "oss@yusu79.com",
+    "url": "https://github.com/yusu79"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yusu79/vscode-markdown-clip"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/yusu79"
+  },
+  "icon": "icons/icon.png",
+  "private": true,
+  "keywords": [
+    "markdown"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "commands": [
+      {
+        "command": "markdown-clip.copyAsHtml",
+        "title": "%markdown-clip.copyAsHtml.title%",
+        "category": "Markdown Clip",
+        "description": "%markdown-clip.copyAsHtml.description%",
+        "icon": "icons/copyAsHtml.svg"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == markdown",
+          "command": "markdown-clip.copyAsHtml",
+          "group": "Markdown"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "editorLangId == markdown",
+          "command": "markdown-clip.copyAsHtml",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "markdown-clip.copyAsHtml",
+        "key": "ctrl+shift+c",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "markdown-clip Configuration",
+      "properties": {
+        "markdown-clip.headingId.remove": {
+          "type": "boolean",
+          "default": true,
+          "description": "%markdown-clip.configuration.headingId.remove%"
+        },
+        "markdown-clip.markdown-it-attrs.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "%markdown-clip.configuration.markdown-it-attrs.enable%"
+        },
+        "markdown-clip.markdown-it-attrs.options": {
+          "type": "object",
+          "default": {
+            "leftDelimiter": "{",
+            "rightDelimiter": "}",
+            "allowedAttributes": [
+              "id",
+              "class"
+            ]
+          },
+          "description": "%markdown-clip.configuration.markdown-it-attrs.options%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.95.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "copy-paste": "^1.5.3",
+    "js-yaml": "^4.1.0",
+    "markdown-it-attrs": "^4.2.0"
+  }
+}
