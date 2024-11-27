@@ -1,5 +1,4 @@
 # Markdown Clip
-![GitHub License](https://img.shields.io/github/license/yusu79/vscode-markdown-clip)
 ![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/yusu79.vscode-markdown-clip)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
 
