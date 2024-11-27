@@ -1,7 +1,7 @@
 # Markdown Clip
 ![GitHub License](https://img.shields.io/github/license/vscode-markdown-clip/yusu79/)
-![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/yusu79.markdown-clip)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.markdown-clip)
+![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/yusu79.vscode-markdown-clip)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
 
 A VSCode extension that provides functionality to convert Markdown to HTML and copy it to the clipboard.
 
@@ -17,7 +17,7 @@ A VSCode extension that provides functionality to convert Markdown to HTML and c
 ## Setup
 Enter "Markdown Clip" in the VScode marketplace.
 
-
+<div style="text-align: center;"><img src="icons/setup.png" width="70%"/></div>
 
 ## Features
 - Convert selected Markdown text to HTML
