@@ -3,5 +3,5 @@
     "markdown-clip.copyAsHtml.description": "MarkdownをHTMLに変換してクリップボードにコピーします。",
     "markdown-clip.configuration.headingId.remove": "自動生成される見出しIDを無効化します。",
     "markdown-clip.configuration.markdown-it-attrs.enable": "プレビュー画面からカスタムID（{#id}形式）を削除します。",
-    "markdown-clip.configuration.markdown-it-attrs.options": "カスタムID機能の詳細設定（区切り文字など）"
+    "markdown-clip.configuration.markdown-it-attrs.options": "markdown-it-attrs の詳細設定（区切り文字など）"
 }
