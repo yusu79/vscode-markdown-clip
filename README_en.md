@@ -108,6 +108,7 @@ The icon displayed in the VScode extension is a combination of these two images:
 | [Clip Free Icon Material](https://icooon-mono.com/00017-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90/) | [icooon-mono License](https://icooon-mono.com/license/) | [icooon-mono](https://icooon-mono.com/) |
 
 ## Used Plugins
+- [copy-paste](https://www.npmjs.com/package/copy-paste)
 - [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs)
 
 ## Acknowledgments

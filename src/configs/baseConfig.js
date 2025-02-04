@@ -1,68 +1,63 @@
 const vscode = require("vscode");
 
 class BaseConfig extends vscode.Disposable {
-    constructor(configSection) {
+    constructor(extension) {
         super(() => this.dispose());
-        this._configSectionName = configSection;
-        this._folderConfigSections = {};
-        this.getConfObjects(configSection);
+        this._extensionName = extension;
+        this._folderConf = {};
+        this.getWorkspaceConf(extension);
         this._disposable = vscode.workspace.onDidChangeConfiguration(async(e) => {
-            if (e.affectsConfiguration(this._configSectionName)) {
+            if (e.affectsConfiguration(this._extensionName)) {
                 const answer = await vscode.window.showInformationMessage(
-                    '設定を反映するにはVSCodeをリロードする必要があります。リロードしますか？',
-                    'はい', 'いいえ'
+                    vscode.l10n.t("You need to reload VSCode to apply the settings.\nDo you want to reload?"),
+                    vscode.l10n.t("Yes"),
+                    vscode.l10n.t("No")
                 );
-                if (answer === 'はい') {
+                if (answer === vscode.l10n.t("Yes")) {
                     await vscode.commands.executeCommand('workbench.action.reloadWindow');
                 }
             }
             this.onChange(e);
-            this.getConfObjects(configSection);
+            this.getWorkspaceConf(extension);
         });
     }
 
     dispose() { this._disposable && this._disposable.dispose(); }
 
-    getConfObjects(configSection) {
-        this._configSection = vscode.workspace.getConfiguration(configSection); 
-        // 〇〇.config 全てを取得する
+    // ワークスペース(左のフォルダ)に設定フォルダがあれば、そっちを優先をしてthis._extensionを上書き
+    getWorkspaceConf(extension) {
+        this._extension = vscode.workspace.getConfiguration(extension); 
+        // package.jsonに記述されたconfigurationの値を全てを取得する
         // "contributes":{ 
-        //    "configuration": { 
-        //      "type": "object",
-        //      "title": "〇〇 Configuration",
-        //      "properties": {
-        //          "〇〇.config1": {}, 
-        //          "〇〇.config2": {},
-        //                  :,
-        //      } 
+        //    "configuration": {} 
         // }
 
         this._folders = vscode.workspace.workspaceFolders;
-        this._folderConfigSections = {};
+        this._folderConf = {};
 
         if (!this._folders) return;
-        this._folders.map(folder => this._folderConfigSections[folder.uri.fsPath] = vscode.workspace.getConfiguration(configSection, folder.uri));
+        this._folders.map(folder => this._folderConf[folder.uri.fsPath] = vscode.workspace.getConfiguration(extension, folder.uri));
     }
 
-    // 子classがthis.read(propertyName)でコンフィグを読み込めるようになる
+    // this.read(propertyName)で設定値を読み込めるようになる
     read(config, ...para) {
-        if (!para || !para.length || !para[0]) return this._configSection.get(config); 
+        if (!para || !para.length || !para[0]) return this._extension.get(config); 
 
         let 
             uri = para.shift(),
-            folder = vscode.workspace.getWorkspaceFolder(uri);
+            folder = vscode.workspace.getWorkspaceFolder(uri),
+            folderConf = this._folderConf[folder.uri.fsPath];
 
-        if (!folder || !folder.uri) return this._configSection.get(config); 
+        if (!folder || !folder.uri) return this._extension.get(config); 
         
 
-        let folderConfigSection = this._folderConfigSections[folder.uri.fsPath];
-        if (!folderConfigSection) {
-            folderConfigSection = vscode.workspace.getConfiguration(this._configSectionName, folder.uri);
-            this._folderConfigSections[folder.uri.fsPath] = folderConfigSection;
+        if (!folderConf) {
+            folderConf = vscode.workspace.getConfiguration(this._extensionName, folder.uri);
+            this._folderConf[folder.uri.fsPath] = folderConf;
         }
 
         let 
-            folderConfig = folderConfigSection.inspect(config),
+            folderConfig = folderConf.inspect(config),
             func = undefined,
             configValue = undefined;
         

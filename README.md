@@ -1,6 +1,8 @@
 # Markdown Clip
 ![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/yusu79.vscode-markdown-clip)
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/yusu79.vscode-markdown-clip)
+
 
 MarkdownをHTMLに変換し、クリップボードにコピーする機能を提供するVSCode拡張機能です。
 
@@ -119,9 +121,10 @@ VScode拡張機能で表示されるアイコンは、以下の2つの画像を�
 | [クリップのフリーアイコン素材](https://icooon-mono.com/00017-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90/) | [icooon-mono独自のライセンス](https://icooon-mono.com/license/) | [icooon-mono](https://icooon-mono.com/)                                                                         | 
 
 
-
 ## 使用しているプラグイン
+- [copy-paste](https://www.npmjs.com/package/copy-paste)
 - [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs)
+
 
 ## 謝辞
 

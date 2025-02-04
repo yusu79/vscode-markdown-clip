@@ -76,8 +76,3 @@ class DebugCommand extends vscode.Disposable {
 }
 
 exports.DebugCommand = DebugCommand;
-
-// 使い方
-
-// BaseCommandの代わりにDebugCommandを親クラスにしてください。
-// リソースの破棄をデバッグコンソールで監視できます。

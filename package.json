@@ -28,10 +28,11 @@
   "keywords": [
     "markdown"
   ],
-  "main": "./extension.js",
   "activationEvents": [
     "onLanguage:markdown"
   ],
+  "main": "./extension.js",
+  "l10n": "./l10n",
   "contributes": {
     "markdown.markdownItPlugins": true,
     "commands": [
