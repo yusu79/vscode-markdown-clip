@@ -13,7 +13,9 @@ class CopyCommand extends BaseCommand {
     }
     async execute() {
         return copy(await this.renderMarkdown(),() => {
-            vscode.window.showInformationMessage("Markdown copied to clipboard as HTML .")
+            vscode.window.showInformationMessage(
+                vscode.l10n.t("Markdown clipped to clipboard as HTML .")
+            )
         });
     }
     async renderMarkdown() {

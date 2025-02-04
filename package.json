@@ -40,7 +40,6 @@
         "command": "markdown-clip.copyAsHtml",
         "title": "%markdown-clip.copyAsHtml.title%",
         "category": "Markdown Clip",
-        "description": "%markdown-clip.copyAsHtml.description%",
         "icon": "icons/copyAsHtml.svg"
       }
     ],
@@ -71,10 +70,10 @@
       "type": "object",
       "title": "markdown-clip Configuration",
       "properties": {
-        "markdown-clip.headingId.remove": {
+        "markdown-clip.headingIdRemove": {
           "type": "boolean",
           "default": true,
-          "description": "%markdown-clip.configuration.headingId.remove%"
+          "description": "%markdown-clip.configuration.headingIdRemove%"
         },
         "markdown-clip.markdown-it-attrs.enable": {
           "type": "boolean",

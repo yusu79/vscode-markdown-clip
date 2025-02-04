@@ -1,7 +1,6 @@
 {
-    "markdown-clip.copyAsHtml.title": "Copy as HTML",
-    "markdown-clip.copyAsHtml.description": "Convert Markdown to HTML and copy to clipboard.",
-    "markdown-clip.configuration.headingId.remove": "Disable automatic heading ID generation.",
+    "markdown-clip.copyAsHtml.title": "Clip to clipboard as HTML",
+    "markdown-clip.configuration.headingIdRemove": "Disable automatic heading ID generation.",
     "markdown-clip.configuration.markdown-it-attrs.enable": "Remove custom IDs (in {#id} format) from preview screen.",
     "markdown-clip.configuration.markdown-it-attrs.options": "Advanced settings for markdown-it-attrs (e.g. delimiters)."
 }

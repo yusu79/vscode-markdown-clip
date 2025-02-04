@@ -16,7 +16,7 @@ function activate(context) {
     return {        
         extendMarkdownIt(md) {
             // カスタムID（{#custom-id}の形式）を抽出し、HTMLタグに反映
-            if (GetConfig.get("headingId.remove")) {
+            if (GetConfig.get("headingIdRemove")) {
                 md.renderer.rules.heading_open = function(tokens, idx) {
                     const 
                         token = tokens[idx],
