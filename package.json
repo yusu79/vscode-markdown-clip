@@ -70,10 +70,15 @@
       "type": "object",
       "title": "markdown-clip Configuration",
       "properties": {
-        "markdown-clip.headingIdRemove": {
+        "markdown-clip.removeHeadingId": {
           "type": "boolean",
           "default": true,
-          "description": "%markdown-clip.configuration.headingIdRemove%"
+          "description": "%markdown-clip.configuration.removeHeadingId%"
+        },
+        "markdown-clip.removeVSCodeAttributes": {
+          "type": "boolean",
+          "default": false,
+          "description": "%markdown-clip.configuration.removeVSCodeAttributes%"
         },
         "markdown-clip.markdown-it-attrs.enable": {
           "type": "boolean",
@@ -85,10 +90,7 @@
           "default": {
             "leftDelimiter": "{",
             "rightDelimiter": "}",
-            "allowedAttributes": [
-              "id",
-              "class"
-            ]
+            "allowedAttributes": []
           },
           "description": "%markdown-clip.configuration.markdown-it-attrs.options%"
         }

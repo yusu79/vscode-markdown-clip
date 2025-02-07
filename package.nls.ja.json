@@ -1,6 +1,7 @@
 {
     "markdown-clip.copyAsHtml.title": "HTML に変換してクリップボードに貼り付ける",
-    "markdown-clip.configuration.headingIdRemove": "自動生成される見出しIDを無効化します。",
-    "markdown-clip.configuration.markdown-it-attrs.enable": "プレビュー画面からカスタムID（{#id}形式）を削除します。",
+    "markdown-clip.configuration.removeHeadingId": "自動生成される見出しID（<h1 id='タイトル'>）を無効化します。",
+    "markdown-clip.configuration.removeVSCodeAttributes": "自動生成されるVSCodeの各属性（<h1 data-line, class='code-line', dir='auto'>）を無効化します。",
+    "markdown-clip.configuration.markdown-it-attrs.enable": "プレビュー画面でカスタムID（{#id}形式）を非表示にし、代わりに見出しに直接カスタムIDを適用します。",
     "markdown-clip.configuration.markdown-it-attrs.options": "markdown-it-attrs の詳細設定（区切り文字など）"
 }
