@@ -23,7 +23,7 @@
   "sponsor": {
     "url": "https://github.com/sponsors/yusu79"
   },
-  "icon": "icons/icon.png",
+  "icon": "images/icon.png",
   "private": true,
   "keywords": [
     "markdown"
@@ -40,7 +40,7 @@
         "command": "markdown-clip.copyAsHtml",
         "title": "%markdown-clip.copyAsHtml.title%",
         "category": "Markdown Clip",
-        "icon": "icons/copyAsHtml.svg"
+        "icon": "images/copyAsHtml.svg"
       }
     ],
     "menus": {

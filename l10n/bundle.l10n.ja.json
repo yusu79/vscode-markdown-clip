@@ -2,5 +2,5 @@
     "You need to reload VSCode to apply the settings.\nDo you want to reload?": "設定を反映するにはVSCodeをリロードする必要があります。\nリロードしますか？",
     "Yes": "はい",
     "No": "いいえ",
-    "Markdown clipped to clipboard as HTML .": " Markdown を HTML に変換してクリップボードに貼り付けました。"
+    "Markdown converted to HTML and copied to clipboard.": " Markdown を HTML に変換してクリップボードに貼り付けました。"
 }

@@ -1,7 +1,7 @@
 {
-    "markdown-clip.copyAsHtml.title": "Clip to clipboard as HTML",
+    "markdown-clip.copyAsHtml.title": "Convert to HTML and Copy to clipboard",
     "markdown-clip.configuration.removeHeadingId": "Disable automatic heading ID generation (<h1 id='title'>).",
     "markdown-clip.configuration.removeVSCodeAttributes": "Disables automatically generated VSCode attributes (<h1 data-line, class='code-line', dir='auto'>).",
-    "markdown-clip.configuration.markdown-it-attrs.enable": "Hide custom IDs (in {#id} format) in the preview screen and directly apply them to headings as attributes.",
+    "markdown-clip.configuration.markdown-it-attrs.enable": "If you specify a custom attribute (in the form {#id .class}), it will be applied to the HTML tag.",
     "markdown-clip.configuration.markdown-it-attrs.options": "Advanced settings for markdown-it-attrs (e.g. delimiters)."
 }
