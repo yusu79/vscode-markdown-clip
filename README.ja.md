@@ -44,7 +44,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ## 使用方法
 | コマンド                                                   | キーボード                                        | アイコン                                      | 
 | ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | 
-| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <img src="images/copyAsHtml.svg" width="20%"/> | 
+| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | ![](./images/copyAsHtml.png) | 
 
 
 ## 解説

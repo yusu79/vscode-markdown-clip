@@ -43,7 +43,7 @@ Converts the entire Markdown text of a file to HTML and automatically copies it 
 
 | Command                                                  | Keyboard Shortcut                        | Icon                                         |
 |----------------------------------------------------------|------------------------------------------|----------------------------------------------|
-| Convert to HTML and Copy to clipboard                 | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <img src="images/copyAsHtml.svg" width="20%"/> |
+| Convert to HTML and Copy to clipboard                 | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | ![](./images/copyAsHtml.png) |
 
 ## Explanation
 "Markdown Clip" is a VS Code extension that converts Markdown to HTML and copies it to the clipboard.
