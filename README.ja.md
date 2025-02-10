@@ -44,7 +44,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ## 使用方法
 | コマンド                                                   | キーボード                                        | アイコン                                      | 
 | ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | 
-| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <img src="./images/copyAsHtml.png" width="50%"/> | 
+| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> | 
 
 
 ## 解説
@@ -57,11 +57,11 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 4. クリップボードにHTMLがコピーされます
 
 
-```md:Markdownの文章
+```md
 // Markdown の文章
 **文字** 
 ```
-```html:HTMLに変換されてクリップボードに貼り付けられる
+```html
 // HTML に変換されてクリップボードに貼り付けられる
 <strong>文字</strong>
 ```
@@ -73,11 +73,11 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 - true（**デフォルト**）: 自動生成される見出しID（`<h1 id='タイトル'>`）を無効
 - false: 見出しIDを保持
 
-```markdown:
+```md
 // Markdown の文章（※markdown-it-attrs適用）
 # テスト {#test}
 ```
-```html:
+```html
 // 設定が true の場合
 <h1 id="test">テスト</h1>
 
@@ -89,11 +89,11 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 - true: 自動生成されるVSCodeの各属性（`<h1 data-line="数字", class="code-line", dir="auto">`）を無効
 - false（**デフォルト**）: VSCodeの各属性を保持
 
-```markdown:
+```md
 // Markdown の文章
 # テスト
 ```
-```html:
+```html
 // 設定が true の場合
 <h1>テスト</h1>
 
@@ -108,11 +108,11 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
   - true（デフォルト） : カスタム属性（{#id .class}形式）を指定すると、それをHTMLタグに適用します。
   - false : プラグインは無効になり、カスタムID（{#id}形式）が反映されなくなります。
 
-```markdown:
+```md
 // Markdown の文章
 # テスト {.test}
 ```
-```html:
+```html
 // 設定が true の場合
 <h1 class="test">テスト</h1>
 
