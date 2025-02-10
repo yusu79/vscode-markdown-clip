@@ -44,7 +44,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ## 使用方法
 | コマンド                                                   | キーボード                                        | アイコン                                      | 
 | ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | 
-| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | ![](./images/copyAsHtml.png) | 
+| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <img src="./images/copyAsHtml.png" width="50%"/> | 
 
 
 ## 解説
@@ -155,3 +155,5 @@ VScode拡張機能で表示されるアイコンは、以下の2つの画像を�
 このプロジェクトの開発にあたり、以下のオープンソースソフトウェアを参考にさせていただきました。この場を借りて感謝の意を表します。
 
 - [qjebbs/vscode-markdown-extended](https://github.com/qjebbs/vscode-markdown-extended)
+
+追加のライセンス情報については、[NOTICE](https://github.com/yusu79/vscode-markdown-clip/blob/main/NOTICE)ファイルをご覧ください。
