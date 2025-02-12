@@ -1,6 +1,9 @@
 # Change Log
 
-## 1.0.5 - 2025-02-10
+## v1.0.6 - 2025-02-12
+- Change default setting of Remove Heading ID to 'false'
+
+## v1.0.5 - 2025-02-10
 - Enhance Markdown processing and attribute handling
     - Add option to remove auto-generated heading IDs
     - Introduce functionality to remove VSCode-specific attributes
@@ -18,5 +21,5 @@
    - クリップアイコンの機能説明
 
 
-## 1.0.0
+## v1.0.0
 - Initial release

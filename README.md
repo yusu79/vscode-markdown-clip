@@ -65,8 +65,8 @@ Converts the entire Markdown text of a file to HTML and automatically copies it 
 ## Settings
 
 ### Remove Heading ID
-- `true` (Default): Disables automatically generated heading IDs (`<h1 id='Title'>`)
-- `false`: Keep heading IDs
+- `true` : Disables automatically generated heading IDs (`<h1 id='Title'>`)
+- `false` (Default): Keep heading IDs
 
 ```md
 // Markdown Text (with markdown-it-attrs applied)

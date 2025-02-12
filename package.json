@@ -68,11 +68,11 @@
     ],
     "configuration": {
       "type": "object",
-      "title": "markdown-clip Configuration",
+      "title": "Markdown Clip",
       "properties": {
         "markdown-clip.removeHeadingId": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "%markdown-clip.configuration.removeHeadingId%"
         },
         "markdown-clip.removeVSCodeAttributes": {

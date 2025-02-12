@@ -70,8 +70,8 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ## 設定オプション
 
 ### Reomove Heading ID
-- true（**デフォルト**）: 自動生成される見出しID（`<h1 id='タイトル'>`）を無効
-- false: 見出しIDを保持
+- true: 自動生成される見出しID（`<h1 id='タイトル'>`）を無効
+- false（**デフォルト**）: 見出しIDを保持
 
 ```md
 // Markdown の文章（※markdown-it-attrs適用）
