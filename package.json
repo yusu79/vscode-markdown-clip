@@ -2,7 +2,7 @@
   "name": "vscode-markdown-clip",
   "displayName": "Markdown Clip",
   "description": "Converts Markdown to HTML and Copies it to the clipboard.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "engines": {
     "vscode": "^1.95.0"
   },
