@@ -112,7 +112,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "copy-paste": "^1.5.3",
     "js-yaml": "^4.1.0",
     "markdown-it-attrs": "^4.2.0"
   }
