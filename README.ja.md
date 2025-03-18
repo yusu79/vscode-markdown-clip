@@ -69,7 +69,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 
 ## 設定オプション
 
-### Reomove Heading ID
+### Remove Heading ID
 - true: 自動生成される見出しID（`<h1 id='タイトル'>`）を無効
 - false（**デフォルト**）: 見出しIDを保持
 
@@ -85,7 +85,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 <h1 id="test" id="テスト-test">テスト</h1>
 ```
 
-### Reomove VSCode Attributes
+### Remove VSCode Attributes
 - true: 自動生成されるVSCodeの各属性（`<h1 data-line="数字", class="code-line", dir="auto">`）を無効
 - false（**デフォルト**）: VSCodeの各属性を保持
 
@@ -146,7 +146,6 @@ VScode拡張機能で表示されるアイコンは、以下の2つの画像を�
 
 
 ## 使用しているプラグイン
-- [copy-paste](https://www.npmjs.com/package/copy-paste)
 - [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs)
 
 
