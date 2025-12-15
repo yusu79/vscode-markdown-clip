@@ -103,17 +103,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
-    "@types/vscode": "^1.95.0",
-    "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "25.x",
+    "@types/vscode": "^1.107.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "copy-paste": "^1.5.3",
+    "copy-paste": "^2.2.0",
     "js-yaml": "^4.1.1",
-    "markdown-it-attrs": "^4.2.0"
+    "markdown-it-attrs": "^4.3.1"
   }
 }

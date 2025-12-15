@@ -1,6 +1,11 @@
 # Change Log
 
-## v1.0.6 - 2025-02-12
+## v1.0.8 - 2025-12-15
+- Security: update glob dependency to a patched version
+
+- セキュリティ対応: glob の依存関係を修正済みバージョンへ更新
+
+## v1.0.7 - 2025-02-12
 - Change default setting of Remove Heading ID to 'false'
 
 ## v1.0.5 - 2025-02-10
