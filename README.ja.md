@@ -36,8 +36,8 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ![](./images/markdown-clip_jp.gif)
 
 ## 機能
-- 選択した Markdownテキスト を HTML に変換
-- 選択範囲がない場合は、Markdownファイル 全体を変換
+- 選択したMarkdownテキストをHTMLに変換
+- 選択範囲がない場合は、Markdownファイル全体を変換
 - 変換したHTMLをクリップボードに自動貼り付け
 
 

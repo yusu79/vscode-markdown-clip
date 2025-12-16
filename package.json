@@ -4,7 +4,7 @@
   "description": "Converts Markdown to HTML and Copies it to the clipboard.",
   "version": "1.0.8",
   "engines": {
-    "vscode": "^1.95.0"
+    "vscode": "^1.107.0"
   },
   "categories": [
     "Other"
