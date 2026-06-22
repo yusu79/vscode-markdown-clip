@@ -1,0 +1,71 @@
+# ------------------------------------------
+#   Emoji  scope : summary
+# ------ 50 chars ------------------------->|
+
+
+
+# ========================================
+# Commit Message Format
+# ========================================
+#
+#   Emoji  scope : summary
+#     │      │       │
+#     │      │       └─⫸ Brief summary in present tense
+#     │      │
+#     │      └─⫸ Affected area, package, file, etc.
+#     │
+#     └─⫸ Commit type emoji
+#
+#
+# ====================================
+# Commit Type Emojis
+# ====================================
+#
+# ✨  New features
+#      e.g. add image paste support, add settings page, add new command
+#
+# 🐛  Bug fixes
+#      e.g. fix crashes, fix incorrect conversions, add exception handling
+#
+# ♻️  Code refactoring without feature additions or bug fixes
+#      e.g. split large functions, reorganize classes, remove duplicate code
+#
+# 🏗️  Add, remove, or modify external dependencies and build settings
+#      e.g. update package.json, add npm packages, add eslint.config.js
+#
+# 🔄  Continuous Integration (CI) related changes
+#      e.g. update GitHub Actions, add automated tests, configure automated releases
+#
+# 📚  Documentation changes
+#      e.g. add installation instructions, add usage examples, update screenshots
+#
+# 🛠️  Performance improvements
+#      e.g. reduce unnecessary recalculations, speed up searches, reduce memory usage
+#
+# 🧹  Maintenance and miscellaneous tasks
+#      e.g. update .gitignore, run npm update, update licenses, reorganize folders
+#
+# 🧪  Add or modify tests
+#      e.g. add unit tests, update test cases, modify test environment configuration
+#
+# 🎨  Code style and formatting changes (no functional impact)
+#      e.g. run Prettier, fix indentation, clean up line breaks
+#
+#
+# ========================================
+# Commit Body
+# ========================================
+#
+# Use bullet points (*) to explain changes and motivations.
+# You may compare previous and new behavior to clarify impact.
+#
+#
+# ========================================
+# Example
+# ========================================
+#
+# ✨ extension : add clipboard image support
+#
+# * Add image paste support from clipboard
+# * Save pasted images to workspace
+# * Insert generated Markdown automatically
