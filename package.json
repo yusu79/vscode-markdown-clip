@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "vscode-markdown-clip",
   "displayName": "Markdown Clip",
   "description": "Converts Markdown to HTML and Copies it to the clipboard.",
@@ -24,7 +25,6 @@
     "url": "https://github.com/sponsors/yusu79"
   },
   "icon": "images/icon.png",
-  "private": true,
   "keywords": [
     "markdown"
   ],
