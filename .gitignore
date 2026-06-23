@@ -5,6 +5,7 @@ node_modules
 .DS_Store
 */.DS_Store
 *.vsix
+test-workspace/*
 
 # Dependencies
 node_modules

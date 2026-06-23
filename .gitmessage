@@ -1,42 +1,71 @@
 # ------------------------------------------
-#   絵文字  xxx : zzz
-# ------ 50 文字 -------------------------->|
+#   Emoji  scope: summary
+# ------ 50 chars ------------------------->|
 
 
 
 # ========================================
-# コミットメッセージの書き方
+# Commit Message Format
 # ========================================
 #
-#   絵文字  xxx : zzz
-#     │    │    │
-#     │    │    └─⫸ 現在形で要約
-#     │    │
-#     │    └─⫸ 影響を受ける範囲、パッケージ、ファイル等
+#   Emoji  scope: summary
+#     │      │       │
+#     │      │       └─⫸ Brief summary in present tense
+#     │      │
+#     │      └─⫸ Affected area, package, file, etc.
 #     │
-#     └─⫸ コミットの種類の絵文字
+#     └─⫸ Commit type emoji
 #
 #
 # ====================================
-# コミットの種類の絵文字
+# Commit Type Emojis
 # ====================================
 #
+# ✨  New features
+#      e.g. add image paste support, add settings page, add new command
 #
-# 🏗️  ビルドシステムまたは外部依存関係に影響する変更
-# 🔄  継続的インテグレーション（CI）関連の変更
-# ✨  新機能の追加
-# 🐛  バグ修正
-# 🛠️  パフォーマンスを改善するコード変更
-# ♻️  機能追加やバグ修正を伴わないコード構造の改善（リファクタリング）
-# 🧪  不足しているテストの追加または既存テストの修正
-# 🧹  依存関係の更新などの雑務的な変更
-# 🎨  空白・インデント・セミコロンなどの整形（動作に影響しない変更）
-# 📚  READMEの変更
+# 🐛  Bug fixes
+#      e.g. fix crashes, fix incorrect conversions, add exception handling
+#
+# ♻️  Code refactoring without feature additions or bug fixes
+#      e.g. split large functions, reorganize classes, remove duplicate code
+#
+# 🏗️  Add, remove, or modify external dependencies and build settings
+#      e.g. update package.json, add npm packages, add eslint.config.js
+#
+# 🔄  Continuous Integration (CI) related changes
+#      e.g. update GitHub Actions, add automated tests, configure automated releases
+#
+# 📚  Documentation changes
+#      e.g. add installation instructions, add usage examples, update screenshots
+#
+# 🛠️  Performance improvements
+#      e.g. reduce unnecessary recalculations, speed up searches, reduce memory usage
+#
+# 🧹  Maintenance and miscellaneous tasks
+#      e.g. update .gitignore, run npm update, update licenses, reorganize folders
+#
+# 🧪  Add or modify tests
+#      e.g. add unit tests, update test cases, modify test environment configuration
+#
+# 🎨  Code style and formatting changes (no functional impact)
+#      e.g. run Prettier, fix indentation, clean up line breaks
 #
 #
 # ========================================
-# 本文の書き方
+# Commit Body
 # ========================================
 #
-# 箇条書き（*）で変更した内容や動機を説明
-# 変更の影響が把握しやすいよう、以前の動作と新しい動作の対比をここに示してもよい
+# Use bullet points (*) to explain changes and motivations.
+# You may compare previous and new behavior to clarify impact.
+#
+#
+# ========================================
+# Example
+# ========================================
+#
+# ✨ extension : add clipboard image support
+#
+# * Add image paste support from clipboard
+# * Save pasted images to workspace
+# * Insert generated Markdown automatically
