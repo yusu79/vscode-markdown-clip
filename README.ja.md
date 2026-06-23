@@ -33,7 +33,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ファイル全体のMarkdownテキストをHTMLに変換し、クリップボードに自動コピーします。
 
 
-![](./images/markdown-clip_jp.gif)
+![Markdown Clip](https://raw.githubusercontent.com/yusu79/vscode-markdown-clip/main/images/markdown-clip_jp.gif)
 
 ## 機能
 - 選択したMarkdownテキストをHTMLに変換
@@ -42,9 +42,9 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 
 
 ## 使用方法
-| コマンド                                                   | キーボード                                        | アイコン                                      | 
-| ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | 
-| HTMLに変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> | 
+| コマンド                                                   | キーボード                                        | アイコン                                      |
+| ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- |
+| HTMLに変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> |
 
 
 ## 解説
@@ -59,7 +59,7 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 
 ```md
 // Markdown の文章
-**文字** 
+**文字**
 ```
 ```html
 // HTML に変換されてクリップボードに貼り付けられる
@@ -139,10 +139,10 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 VScode拡張機能で表示されるアイコンは、以下の2つの画像を組み合わせたものです。
 
 
-| 画像                                                                                                                                                                                          | ライセンス                                                      | 作者/サイト                                                                                                     | 
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | 
-| [Free Markdown Icon](https://iconscout.com/free-icon/markdown-1)                                                                                                                                  | [MIT ライセンス](https://opensource.org/license/MIT)            | [Benjamin J sperry](https://iconscout.com/contributors/benjamin-j-sperry) / [IconScout](https://iconscout.com/) | 
-| [クリップのフリーアイコン素材](https://icooon-mono.com/00017-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90/) | [icooon-mono独自のライセンス](https://icooon-mono.com/license/) | [icooon-mono](https://icooon-mono.com/)                                                                         | 
+| 画像                                                                                                                                                                                          | ライセンス                                                      | 作者/サイト                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| [Free Markdown Icon](https://iconscout.com/free-icon/markdown-1)                                                                                                                                  | [MIT ライセンス](https://opensource.org/license/MIT)            | [Benjamin J sperry](https://iconscout.com/contributors/benjamin-j-sperry) / [IconScout](https://iconscout.com/) |
+| [クリップのフリーアイコン素材](https://icooon-mono.com/00017-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90/) | [icooon-mono独自のライセンス](https://icooon-mono.com/license/) | [icooon-mono](https://icooon-mono.com/)                                                                         |
 
 
 ## 使用しているプラグイン

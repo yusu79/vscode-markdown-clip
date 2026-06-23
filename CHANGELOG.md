@@ -1,5 +1,33 @@
 # Change Log
 
+## v1.1.0 - 2026-06-23
+
+### Changed
+
+* Replace the `copy-paste` dependency with the native VS Code clipboard API (`vscode.env.clipboard.writeText`)
+* Remove callback-based clipboard handling and use Promise-based processing
+
+### Fixed
+
+* Fix missing success notification after clipboard copy
+* Fix YAML parsing errors when metadata is empty
+* Update Japanese localization messages
+
+
+
+### 変更
+
+* `copy-paste` 依存を廃止し、ネイティブの VS Code クリップボード API (`vscode.env.clipboard.writeText`) へ移行
+* コールバックベースのクリップボード処理を削除し、Promise ベースの処理へ変更
+
+### 修正
+
+* クリップボードコピー後に成功通知が表示されない問題を修正
+* YAML メタデータが空の場合に発生するパースエラーを修正
+* クリップボード関連の日本語翻訳を更新
+
+---
+
 ## v1.0.8 - 2025-12-15
 - Security: update glob dependency to a patched version
 

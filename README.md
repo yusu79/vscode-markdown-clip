@@ -32,7 +32,7 @@ Enter "Markdown Clip" in the VS Code marketplace.
 ## Example
 Converts the entire Markdown text of a file to HTML and automatically copies it to the clipboard.
 
-![](./images/markdown-clip.gif)
+![Markdown Clip](https://raw.githubusercontent.com/yusu79/vscode-markdown-clip/main/images/markdown-clip.gif)
 
 ## Features
 - Convert selected Markdown text to HTML
