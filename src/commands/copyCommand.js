@@ -11,20 +11,13 @@ class CopyCommand extends BaseCommand {
         super("markdown-clip.copyAsHtml"); // super()は親クラスのconstructorを呼び出している。
     }
     async execute() {
-        try {
-            await vscode.env.clipboard.writeText(
-                await this.renderMarkdown()
-            );
+        await vscode.env.clipboard.writeText(
+            await this.renderMarkdown()
+        );
 
-            vscode.window.showInformationMessage(
-                vscode.l10n.t("Markdown converted to HTML and copied to clipboard.")
-            );
-        }
-        catch (error) {
-            vscode.window.showErrorMessage(
-                vscode.l10n.t("Failed to copy to clipboard.")
-            );
-        }
+        vscode.window.showInformationMessage(
+            vscode.l10n.t("Markdown converted to HTML and copied to clipboard.")
+        );
     }
     async renderMarkdown() {
         await ensureMarkdownEngine();

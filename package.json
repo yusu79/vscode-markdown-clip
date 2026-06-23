@@ -2,9 +2,9 @@
   "name": "vscode-markdown-clip",
   "displayName": "Markdown Clip",
   "description": "Converts Markdown to HTML and Copies it to the clipboard.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "engines": {
-    "vscode": "^1.95.0"
+    "vscode": "^1.107.0"
   },
   "categories": [
     "Other"
@@ -103,16 +103,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
-    "@types/vscode": "^1.95.0",
-    "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "26.x",
+    "@types/vscode": "^1.125.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
-    "markdown-it-attrs": "^4.2.0"
+    "js-yaml": "^5.1.0",
+    "markdown-it-attrs": "^5.0.0"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.5",
+    "diff": "^8.0.2"
   }
 }

@@ -4,7 +4,7 @@
 ![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/yusu79.vscode-markdown-clip)
 
-MarkdownをHTMLに変換し、クリップボードにコピーする機能を提供する Visual Studio Code 拡張機能です。
+MarkdownをHTMLに変換し、クリップボードにコピーする機能を提供するVisual Studio Code拡張機能です。
 
 
 <!-- omit in toc -->
@@ -36,15 +36,15 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ![](./images/markdown-clip_jp.gif)
 
 ## 機能
-- 選択した Markdownテキスト を HTML に変換
-- 選択範囲がない場合は、Markdownファイル 全体を変換
+- 選択したMarkdownテキストをHTMLに変換
+- 選択範囲がない場合は、Markdownファイル全体を変換
 - 変換したHTMLをクリップボードに自動貼り付け
 
 
 ## 使用方法
 | コマンド                                                   | キーボード                                        | アイコン                                      | 
 | ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | 
-| HTML に変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> | 
+| HTMLに変換してクリップボードに貼り付ける | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> | 
 
 
 ## 解説
