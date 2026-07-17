@@ -1,8 +1,5 @@
 # Markdown Clip
 ![GitHub License](https://img.shields.io/github/license/yusu79/vscode-markdown-clip)
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yusu79.vscode-markdown-clip)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/yusu79.vscode-markdown-clip)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/yusu79.vscode-markdown-clip)
 
 [日本語版の「README」はこちらから](https://github.com/yusu79/vscode-markdown-clip/blob/main/README.ja.md)
 
