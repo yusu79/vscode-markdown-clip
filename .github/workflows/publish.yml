@@ -1,0 +1,14 @@
+name: Publish Extension
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello GitHub Actions
+        run: echo "GitHub Actions is working!"
