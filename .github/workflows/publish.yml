@@ -6,9 +6,12 @@ on:
       - "v*"
 
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello GitHub Actions
-        run: echo "GitHub Actions is working!"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Files
+        run: ls -la
