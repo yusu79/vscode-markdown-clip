@@ -24,3 +24,9 @@ jobs:
 
       - name: Show Node version
         run: node --version
+
+      - name: Package Extension
+        run: npx @vscode/vsce package
+
+      - name: Show VSIX File
+        run: ls -la *.vsix
