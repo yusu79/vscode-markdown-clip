@@ -112,7 +112,7 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "js-yaml": "^5.1.0",
+    "js-yaml": "^5.2.2",
     "markdown-it-attrs": "^5.0.0"
   },
   "overrides": {
