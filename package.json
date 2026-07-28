@@ -105,15 +105,15 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "26.x",
-    "@types/vscode": "^1.107.0",
+    "@types/vscode": "^1.125.0",
     "@vscode/test-cli": "^0.0.15",
-    "@vscode/test-electron": "^3.0.0",
-    "eslint": "^10.5.0",
-    "typescript": "^6.0.3"
+    "@vscode/test-electron": "^3.1.0",
+    "eslint": "^10.8.0",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "js-yaml": "^5.2.2",
-    "markdown-it-attrs": "^5.0.0"
+    "markdown-it-attrs": "^5.0.1"
   },
   "overrides": {
     "serialize-javascript": "^7.0.5",
