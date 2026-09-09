@@ -1,3 +1,4 @@
+テスト/
 node_modules
 .vscode-test/
 *.vsix
@@ -5,7 +6,7 @@ node_modules
 .DS_Store
 */.DS_Store
 *.vsix
-test-workspace/*
+test-RunExtension/*
 
 # Dependencies
 node_modules

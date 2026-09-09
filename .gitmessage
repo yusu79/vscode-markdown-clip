@@ -1,71 +1,74 @@
 # ------------------------------------------
-#   Emoji  scope: summary
-# ------ 50 chars ------------------------->|
-
+#   絵文字 ブランチ名: 要約
+# ------ 50 文字 -------------------------->|
 
 
 # ========================================
-# Commit Message Format
+# コミットメッセージの書き方
 # ========================================
 #
-#   Emoji  scope: summary
-#     │      │       │
-#     │      │       └─⫸ Brief summary in present tense
-#     │      │
-#     │      └─⫸ Affected area, package, file, etc.
-#     │
-#     └─⫸ Commit type emoji
+#    絵文字 ブランチ名: 要約
+#       │     │        │
+#       │     │        └─⫸ 現在形で要約
+#       │     │
+#       │     └─⫸ 現在のgitブランチ名
+#       │
+#       └─⫸ コミットの種類
 #
 #
 # ====================================
-# Commit Type Emojis
+# コミットの種類の絵文字
 # ====================================
 #
-# ✨  New features
-#      e.g. add image paste support, add settings page, add new command
 #
-# 🐛  Bug fixes
-#      e.g. fix crashes, fix incorrect conversions, add exception handling
-#
-# ♻️  Code refactoring without feature additions or bug fixes
-#      e.g. split large functions, reorganize classes, remove duplicate code
-#
-# 🏗️  Add, remove, or modify external dependencies and build settings
-#      e.g. update package.json, add npm packages, add eslint.config.js
-#
-# 🔄  Continuous Integration (CI) related changes
-#      e.g. update GitHub Actions, add automated tests, configure automated releases
-#
-# 📚  Documentation changes
-#      e.g. add installation instructions, add usage examples, update screenshots
-#
-# 🛠️  Performance improvements
-#      e.g. reduce unnecessary recalculations, speed up searches, reduce memory usage
-#
-# 🧹  Maintenance and miscellaneous tasks
-#      e.g. update .gitignore, run npm update, update licenses, reorganize folders
-#
-# 🧪  Add or modify tests
-#      e.g. add unit tests, update test cases, modify test environment configuration
-#
-# 🎨  Code style and formatting changes (no functional impact)
-#      e.g. run Prettier, fix indentation, clean up line breaks
+# ✨  新機能の追加
+# 🐛  バグ修正
+# 🧪  不足しているテストの追加または既存テストの修正
+# ♻️  機能追加やバグ修正を伴わないコード構造の改善（リファクタリング）
+# 🛠️  パフォーマンスを改善するコード変更
+# 🔄  継続的インテグレーション（CI）関連の変更
+# 📚  ドキュメントの追加・変更
+# 🏗️  外部依存関係の追加・削除・設定変更
+# 🧹  保守・雑務的な変更
+# 🎨  空白・インデント・セミコロンなどの整形（動作に影響しない変更）
 #
 #
-# ========================================
-# Commit Body
-# ========================================
+# ====================================
+# 対象例
+# ====================================
 #
-# Use bullet points (*) to explain changes and motivations.
-# You may compare previous and new behavior to clarify impact.
+#
+# ✨  例: 画像貼り付け機能追加、設定画面追加、コマンド追加
+# 🐛  例: クラッシュ修正、誤変換修正、例外処理追加
+# 🧪  例: ユニットテスト追加、テストケース修正、テスト環境更新
+# ♻️  例: 関数分割、クラス整理、重複コード削除
+# 🛠️  例: 不要な再計算削減、検索高速化、メモリ使用量削減
+# 🔄  例: GitHub Actions修正、自動テスト追加、自動リリース設定
+# 📚  例: README.md修正、AGENTS.md修正、CONTRIBUTING.md修正、仕様書更新
+# 🏗️  例: package.json更新、npm package追加、eslint.config.js追加
+# 🧹  例: .gitignore修正、npm update実行、ライセンス更新、フォルダ整理
+# 🎨  例: インデント修正、改行整理
+#
 #
 #
 # ========================================
-# Example
+# 本文の書き方
 # ========================================
 #
-# ✨ extension : add clipboard image support
+# 箇条書き（*）で変更内容や変更理由を説明します。
+# 必要に応じて、変更前と変更後の動作の違いを記載します。
 #
-# * Add image paste support from clipboard
-# * Save pasted images to workspace
-# * Insert generated Markdown automatically
+#
+# ========================================
+# 記載例
+# ========================================
+#
+# ✨ feature-indian-format: インド式の数値フォーマットを追加する
+#
+# * 右端3桁、その左側を2桁ずつ区切るin formatterを追加する
+# * rendererへinロケールを登録し、単体・統合テストを追加する
+# * インド式表記の変換規則と対応例を仕様書へ反映する
+#
+#
+# 📚 feature-indian-format: コミットメッセージ規約を更新する
+# * コミットメッセージの対象にブランチ名を使用できることを明記する
