@@ -19,6 +19,7 @@ module.exports = [
                 process: "readonly",
                 __dirname: "readonly",
                 __filename: "readonly",
+                structuredClone: "readonly",
 
                 suite: "readonly",
                 test: "readonly",

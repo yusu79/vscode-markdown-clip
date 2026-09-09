@@ -34,7 +34,7 @@ class MarkdownDocument {
             }
             if (endLine < 0) startLine = -1;// 2つ目の「---」が無いなら､startLineを-1に
         }
-        if (startLine == 0 && endLine > 0)
+        if (startLine == 0 && endLine > 1)
             // 最初の「---」が1行目で､2つ目の「---」が存在するなら､以下の処理を実行
             meta = this.document.getText(this.document.lineAt(1).range.union(this.document.lineAt(endLine - 1).range));// A.union(B)は和集合を意味する｡テキスト.rangeはその行全体を意味する｡1行目は「---」､endLineは「---」なので､その間の文章全てを取得するという意味｡
         else
