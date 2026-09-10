@@ -1,23 +1,10 @@
 # Markdown Clip
-![GitHub License](https://img.shields.io/github/license/yusu79/vscode-markdown-clip)
+[![GitHub License](https://img.shields.io/github/license/yusu79/vscode-markdown-clip)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/yusu79/vscode-markdown-clip)](https://github.com/yusu79/vscode-markdown-clip/releases/latest)
 
-[日本語版の「README」はこちらから](https://github.com/yusu79/vscode-markdown-clip/blob/main/README.ja.md)
-
+[English](#markdown-clip) | [日本語](#日本語)
 
 A Visual Studio Code extension that provides functionality to convert Markdown to HTML and copy it to the clipboard.
-
-
-<!-- omit in toc -->
-## TOC
-- [Installation](#installation)
-- [Example](#example)
-- [Features](#features)
-- [Usage](#usage)
-- [Explanation](#explanation)
-- [Settings](#settings)
-- [Credits](#credits)
-- [Used Plugins](#used-plugins)
-- [Acknowledgments](#acknowledgments)
 
 ## Installation
 Enter "Markdown Clip" in the VS Code marketplace.
@@ -35,6 +22,8 @@ Converts the entire Markdown text of a file to HTML and automatically copies it 
 - Convert selected Markdown text to HTML
 - If no range is selected, convert the entire Markdown file
 - Automatically copy the converted HTML to the clipboard
+- Apply Markdown-it plugins registered with VS Code to the converted HTML
+- Pass the source document's parsed YAML Front Matter to plugins as `env.frontmatter`, including selection conversions
 
 ## Usage
 
@@ -55,7 +44,7 @@ Converts the entire Markdown text of a file to HTML and automatically copies it 
 **Text**
 ```
 ```html
-// HTML converted and pasted to clipboard
+// HTML converted and copied to clipboard
 <strong>Text</strong>
 ```
 
@@ -157,4 +146,151 @@ In developing this project, we referenced the following open-source software. We
 - [qjebbs/vscode-markdown-extended](https://github.com/qjebbs/vscode-markdown-extended)
 
 For additional licensing information, please see the [NOTICE](https://github.com/yusu79/vscode-markdown-clip/blob/main/NOTICE) file.
+
+---
+
+## 日本語
+
+[English](#markdown-clip) | [日本語](#日本語)
+
+MarkdownをHTMLに変換し、クリップボードにコピーする機能を提供するVisual Studio Code拡張機能です。
+
+### インストール
+Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力してください｡
+
+<p align="center">
+<img src="images/setup.png" width="70%"/>
+</p>
+
+### 使用例
+ファイル全体のMarkdownテキストをHTMLに変換し、クリップボードに自動コピーします。
+
+![Markdown Clip](https://raw.githubusercontent.com/yusu79/vscode-markdown-clip/main/images/markdown-clip_jp.gif)
+
+### 機能
+- 選択したMarkdownテキストをHTMLに変換
+- 選択範囲がない場合は、Markdownファイル全体を変換
+- 変換したHTMLをクリップボードに自動コピー
+- VS Codeに登録されたMarkdown-itプラグインを変換後のHTMLへ反映
+- 選択範囲の変換時も、元文書の解析済みYAML Front Matterを`env.frontmatter`としてプラグインへ渡す
+
+### 使用方法
+| コマンド                                                   | キーボード                                        | アイコン                                      |
+| ---------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- |
+| HTMLに変換してクリップボードにコピーする | <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | <p align="center"><img src="./images/copyAsHtml.png" width="50%"/></p> |
+
+### 解説
+「Markdown Clip」は、MarkdownをHTMLに変換し、クリップボードにコピーするVisual Studio Code拡張機能です。
+
+1. Markdownファイルを開く
+2. 変換したい範囲を選択（任意）
+3. 任意の方法でコマンドを実行
+4. クリップボードにHTMLがコピーされます
+
+```md
+// Markdown の文章
+**文字**
+```
+```html
+// HTML に変換されてクリップボードにコピーされる
+<strong>文字</strong>
+```
+
+### 設定オプション
+
+#### Remove Heading ID
+
+- true（**デフォルト**）: Markdown ClipでコピーするHTMLから、自動IDを削除します。`markdown-it-attrs`などのMarkdown-itプラグインで明示的に付けたIDは維持します。
+- false: 明示IDがない見出しの自動IDを維持します。明示IDがある場合は、明示IDを優先します。
+
+この設定が変更するのはコピーするHTMLだけです。VS Codeプレビューの見出しジャンプには影響しません。
+
+```md
+# 自動ID
+# 自動ID {#明示ID}
+```
+```html
+<!-- 設定がtrueの場合 -->
+<h1>自動ID</h1>
+<h1 id="明示ID">自動ID</h1>
+
+<!-- 設定がfalseの場合 -->
+<h1 id="自動id">自動ID</h1>
+<h1 id="明示ID">自動ID</h1>
+```
+
+自動IDの具体的な値は使用中のrendererによって異なります。明示IDと自動IDが同じ見出しに付与された場合は、設定にかかわらず明示IDだけを維持し、1つの見出しに複数の`id`属性を出力しません。
+
+同じMarkdown文書内で、見出しの明示IDが重複すると、該当するすべての`{#ID}`に警告を表示します。HTMLの`id`は文書内で一意にしてください。
+
+これは警告のみです。Markdown ClipはHTMLへの変換やコピーを中止せず、明示IDを自動的に変更しません。自動ID、コードブロック内の`{#ID}`、別のMarkdown文書にある同名IDは警告の対象外です。
+
+#### Remove VSCode Attributes
+
+- true（**デフォルト**）: Markdown ClipでコピーするHTMLから、VS Codeの`data-line`属性と`code-line`クラスを削除します。他のクラスと`dir="auto"`は維持します。
+- false: コピーするHTMLにこれらのVS Code属性を維持します。
+
+この設定が変更するのはコピーするHTMLだけで、VS Codeプレビューには影響しません。
+
+```md
+// Markdown の文章
+# テスト
+```
+```html
+<!-- 設定がtrueの場合 -->
+<h1 dir="auto">テスト</h1>
+
+<!-- 設定がfalseの場合 -->
+<h1 data-line="0" class="code-line" dir="auto">テスト</h1>
+```
+
+#### プラグイン設定
+##### ON/OFF機能
+- `Markdown-it-attrs: Enable`
+  - true（デフォルト） : カスタム属性（{#id .class}形式）を指定すると、それをHTMLタグに適用します。
+  - false : プラグインは無効になり、カスタムID（{#id}形式）が反映されなくなります。
+
+```md
+// Markdown の文章
+# テスト {.test}
+```
+```html
+// 設定が true の場合
+<h1 class="test">テスト</h1>
+
+// 設定が false の場合
+<h1>テスト {.test}</h1>
+```
+
+##### 詳細設定
+- `Markdown-it-attrs: Options`
+  - settings.json で編集: 各プラグインの詳細設定を編集できます
+
+以下がデフォルト設定です。
+```json
+{
+    "leftDelimiter": "{",    // 開始区切り文字
+    "rightDelimiter": "}",   // 終了区切り文字
+    "allowedAttributes": []  // 許可する属性（表記無しは全て許可）
+}
+```
+
+### クレジット
+VS Code拡張機能で表示されるアイコンは、以下の2つの画像を組み合わせたものです。
+
+| 画像                                                                                                                                                                                          | ライセンス                                                      | 作者/サイト                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| [Free Markdown Icon](https://iconscout.com/free-icon/markdown-1)                                                                                                                                  | [MIT ライセンス](https://opensource.org/license/MIT)            | [Benjamin J sperry](https://iconscout.com/contributors/benjamin-j-sperry) / [IconScout](https://iconscout.com/) |
+| [クリップのフリーアイコン素材](https://icooon-mono.com/00017-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%B4%A0%E6%9D%90/) | [icooon-mono独自のライセンス](https://icooon-mono.com/license/) | [icooon-mono](https://icooon-mono.com/)                                                                          |
+
+### 使用しているプラグイン
+- [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs)
+
+### 謝辞
+
+このプロジェクトの開発にあたり、以下のオープンソースソフトウェアを参考にさせていただきました。この場を借りて感謝の意を表します。
+
+- [qjebbs/vscode-markdown-extended](https://github.com/qjebbs/vscode-markdown-extended)
+
+追加のライセンス情報については、[NOTICE](https://github.com/yusu79/vscode-markdown-clip/blob/main/NOTICE)ファイルをご覧ください。
 
