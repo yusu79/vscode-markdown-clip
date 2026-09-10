@@ -1,11 +1,13 @@
 .vscode/**
 .vscode-test/**
 test/**
+test-RunExtension/**
+docs/**
 .github/**
 .git/**
 .gitignore
+AGENTS.md
 .yarnrc
-vsc-extension-quickstart.md
 **/jsconfig.json
 **/*.map
 **/.eslintrc.json

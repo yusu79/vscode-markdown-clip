@@ -72,12 +72,12 @@
       "properties": {
         "markdown-clip.removeHeadingId": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "%markdown-clip.configuration.removeHeadingId%"
         },
         "markdown-clip.removeVSCodeAttributes": {
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "%markdown-clip.configuration.removeVSCodeAttributes%"
         },
         "markdown-clip.markdown-it-attrs.enable": {
@@ -105,7 +105,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "26.x",
-    "@types/vscode": "^1.125.0",
+    "@types/vscode": "1.107.0",
     "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.1.0",
     "eslint": "^10.8.0",

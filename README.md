@@ -62,34 +62,48 @@ Converts the entire Markdown text of a file to HTML and automatically copies it 
 ## Settings
 
 ### Remove Heading ID
-- `true` : Disables automatically generated heading IDs (`<h1 id='Title'>`)
-- `false` (Default): Keep heading IDs
+
+- `true` (Default): Remove automatic heading IDs from the HTML copied by Markdown Clip. Explicit IDs assigned by Markdown-it plugins, such as `markdown-it-attrs`, are preserved.
+- `false`: Keep automatic IDs on headings without an explicit ID. If a heading has an explicit ID, the explicit ID takes precedence.
+
+This setting changes only the copied HTML. It does not affect heading navigation in the VS Code preview.
 
 ```md
-// Markdown Text (with markdown-it-attrs applied)
-# Test {#test}
+# Automatic ID
+# Automatic ID {#explicit-id}
 ```
 ```html
-// If setting is true
-<h1 id="test">Test</h1>
+<!-- If setting is true -->
+<h1>Automatic ID</h1>
+<h1 id="explicit-id">Automatic ID</h1>
 
-// If setting is false
-<h1 id="test" id="Test-test">Test</h1>
+<!-- If setting is false -->
+<h1 id="automatic-id">Automatic ID</h1>
+<h1 id="explicit-id">Automatic ID</h1>
 ```
 
+The exact automatic ID depends on the active renderer. If both an explicit ID and an automatic ID are assigned to the same heading, Markdown Clip preserves only the explicit ID regardless of this setting. It does not output multiple `id` attributes on one heading.
+
+If an explicit heading ID is duplicated within the same Markdown document, a warning is shown on every affected `{#ID}`. Keep HTML `id` values unique within a document.
+
+This is only a warning. Markdown Clip does not stop conversion or copying, and it does not automatically change explicit IDs. Automatic IDs, `{#ID}` inside code blocks, and matching IDs in separate Markdown documents do not trigger this warning.
+
 ### Remove VSCode Attributes
-- `true`: Disables automatically generated VSCode attributes (`<h1 data-line="number", class="code-line", dir="auto">`)
-- `false` (Default): Keep VSCode attributes
+
+- `true` (Default): Remove VS Code's `data-line` attribute and `code-line` class from the HTML copied by Markdown Clip. Other classes and `dir="auto"` are preserved.
+- `false`: Keep these VS Code attributes in the copied HTML.
+
+This setting changes only the copied HTML and does not affect the VS Code preview.
 
 ```md
 // Markdown Text
 # Test
 ```
 ```html
-// If setting is true
-<h1>Test</h1>
+<!-- If setting is true -->
+<h1 dir="auto">Test</h1>
 
-// If setting is false
+<!-- If setting is false -->
 <h1 data-line="0" class="code-line" dir="auto">Test</h1>
 ```
 

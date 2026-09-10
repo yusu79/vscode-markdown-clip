@@ -67,34 +67,48 @@ Visual Studio Code のマーケットプレイスで「Markdown Clip」と入力
 ## 設定オプション
 
 ### Remove Heading ID
-- true: 自動生成される見出しID（`<h1 id='タイトル'>`）を無効
-- false（**デフォルト**）: 見出しIDを保持
+
+- true（**デフォルト**）: Markdown ClipでコピーするHTMLから、自動IDを削除します。`markdown-it-attrs`などのMarkdown-itプラグインで明示的に付けたIDは維持します。
+- false: 明示IDがない見出しの自動IDを維持します。明示IDがある場合は、明示IDを優先します。
+
+この設定が変更するのはコピーするHTMLだけです。VS Codeプレビューの見出しジャンプには影響しません。
 
 ```md
-// Markdown の文章（※markdown-it-attrs適用）
-# テスト {#test}
+# 自動ID
+# 自動ID {#明示ID}
 ```
 ```html
-// 設定が true の場合
-<h1 id="test">テスト</h1>
+<!-- 設定がtrueの場合 -->
+<h1>自動ID</h1>
+<h1 id="明示ID">自動ID</h1>
 
-// 設定が false の場合
-<h1 id="test" id="テスト-test">テスト</h1>
+<!-- 設定がfalseの場合 -->
+<h1 id="自動id">自動ID</h1>
+<h1 id="明示ID">自動ID</h1>
 ```
 
+自動IDの具体的な値は使用中のrendererによって異なります。明示IDと自動IDが同じ見出しに付与された場合は、設定にかかわらず明示IDだけを維持し、1つの見出しに複数の`id`属性を出力しません。
+
+同じMarkdown文書内で、見出しの明示IDが重複すると、該当するすべての`{#ID}`に警告を表示します。HTMLの`id`は文書内で一意にしてください。
+
+これは警告のみです。Markdown ClipはHTMLへの変換やコピーを中止せず、明示IDを自動的に変更しません。自動ID、コードブロック内の`{#ID}`、別のMarkdown文書にある同名IDは警告の対象外です。
+
 ### Remove VSCode Attributes
-- true: 自動生成されるVSCodeの各属性（`<h1 data-line="数字", class="code-line", dir="auto">`）を無効
-- false（**デフォルト**）: VSCodeの各属性を保持
+
+- true（**デフォルト**）: Markdown ClipでコピーするHTMLから、VS Codeの`data-line`属性と`code-line`クラスを削除します。他のクラスと`dir="auto"`は維持します。
+- false: コピーするHTMLにこれらのVS Code属性を維持します。
+
+この設定が変更するのはコピーするHTMLだけで、VS Codeプレビューには影響しません。
 
 ```md
 // Markdown の文章
 # テスト
 ```
 ```html
-// 設定が true の場合
-<h1>テスト</h1>
+<!-- 設定がtrueの場合 -->
+<h1 dir="auto">テスト</h1>
 
-// 設定が false の場合
+<!-- 設定がfalseの場合 -->
 <h1 data-line="0" class="code-line" dir="auto">テスト</h1>
 ```
 

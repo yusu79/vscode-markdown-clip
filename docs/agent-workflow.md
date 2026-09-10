@@ -8,15 +8,13 @@ CodexなどのAIエージェントがこのプロジェクトで作業すると�
 
 コードを変更する前に、以下を確認する。
 
-1. Out-of-Code Insights の未解決 annotation
+1. Out-of-Code Insights の `annotations.json`
 2. 関係するファイル
 3. `package.json`
 4. 関連する既存実装
 5. 関連する既存テスト
 
-ソースコードや既存資料から確認できる事項を推測で判断しない。
-
-変更対象に関連するannotationがある場合は、`manage-project-annotations` Skillを使用する。
+ソースコードや既存資料から確認できる事項を推測で判断しない。`manage-project-annotations` Skillは使用しない
 
 ## 実装
 
@@ -54,6 +52,11 @@ CodexなどのAIエージェントがこのプロジェクトで作業すると�
 * `git log`
 
 コミットメッセージの作成を依頼された場合は、変更差分と `.gitmessage` を確認し、その形式に従って今回の変更内容を正確に反映する。
+
+## annotation への対処
+
+annotationの処理を依頼された場合は、`manage-project-annotations` Skillを使用する。
+
 
 ## リリース時の確認
 

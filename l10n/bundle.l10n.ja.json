@@ -2,5 +2,6 @@
     "You need to reload VSCode to apply the settings.\nDo you want to reload?": "設定を反映するにはVSCodeをリロードする必要があります。\nリロードしますか？",
     "Yes": "はい",
     "No": "いいえ",
-    "Markdown converted to HTML and copied to clipboard.": "MarkdownをHTMLに変換してクリップボードへコピーしました。"
+    "Markdown converted to HTML and copied to clipboard.": "MarkdownをHTMLに変換してクリップボードへコピーしました。",
+    "Heading ID \"{0}\" is duplicated in this document. IDs must be unique.": "見出しID「{0}」がこの文書内で重複しています。IDは一意にしてください。"
 }
